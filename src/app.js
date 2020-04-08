@@ -76,8 +76,8 @@ app.post("/repositories/:id/like", (request, response) => {
   }
 
   () => repository.id += 1;
-
-  return response.json(repositories);
+ //converter o id do JSON com .parse, depois .stringfy
+  return response.json(repositories).increment("id");
 });
 
 module.exports = app;
