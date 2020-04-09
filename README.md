@@ -2,14 +2,17 @@
 
 ### Passos para executar o desafio desenvolvido:
 -  Clonar o projeto
-> Executar o comando ` git clone https://github.com/luisscarlos/bootcamp-desafio-conceitos-node.git` através do teminal na pasta que deseja clonar.
+> Executar o comando `git clone git clone https://github.com/luisscarlos/bootcamp-desafio-conceitos-node.git` no teminal na pasta que deseja clonar
 
 - Iniciar dependências
- > Na raiz do projeto executar o comando`yarn` no terminal.
+ > Na raiz do projeto executar o comando`yarn` no terminal
 
 - Iniciar o projeto
-> Na raiz do projeto executar o comando`yarn dev` no terminal.
+> Executar o comando`yarn dev` no terminal
 
--  As requisições do insomnia podem ser encontradas no arquivo `Insomnia_requests.json`.
+- Executar os testes automatizados com jest
+> Executar o comando`yarn test` no terminal
+
+-  As requisições da aplicação no insomnia podem ser encontradas no arquivo `Insomnia_requests.json`.
 
 Made with 🚀 by Luis.
