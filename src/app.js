@@ -12,6 +12,7 @@ const repositories = [];
 
 // List
 app.get("/repositories", (request, response) => {
+
   return response.json(repositories);
 });
 
@@ -19,7 +20,7 @@ app.get("/repositories", (request, response) => {
 app.post("/repositories", (request, response) => {
   const { title, url, techs, likes } = request.body;
 
-  const repository = {id: uuid(), title, url, techs, likes};
+  const repository = {id: uuid(), title, url, techs, likes: 0};
 
   repositories.push(repository);
 
@@ -38,6 +39,7 @@ app.put("/repositories/:id", (request, response) => {
   }
 
   const repository = {
+    ...repositories[repositoryIndex],
     id,
     title,
     url,
@@ -67,17 +69,16 @@ app.delete("/repositories/:id", (req, res) => {
 // Add Like
 app.post("/repositories/:id/like", (request, response) => {
   const { id } = request.params;
-  const { title, url, techs, likes } = request.body;
 
-  const repositoryIndex = repositories.findIndex(repository => repository.id === id);
+  const repository = repositories.find(repository => repository.id === id);
 
-  if (repositoryIndex < 0) {
+  if (!repository) {
     return response.status(400).json({ error:"Repository not found." });
   }
 
-  () => repository.id += 1;
- //converter o id do JSON com .parse, depois .stringfy
-  return response.json(repositories).increment("id");
+   repository.likes += 1;
+  
+   return response.json(repository);
 });
 
 module.exports = app;
