@@ -17,6 +17,16 @@ Desenvolver uma aplicação para armazenar repositórios de um portfólio, que i
 - Executar os testes automatizados com jest
 > Executar o comando`yarn test` no terminal
 
--  As requisições da aplicação no insomnia podem ser encontradas no arquivo `Insomnia_requests.json`.
+### Routes
+
+| Routes                 | Method |
+| ---------------------- | ------ |
+| /repositories          | GET    |
+| /repositories          | POST   |
+| /repositories/:id      | PUT    |
+| /repositories/:id      | DELETE |
+| /repositories/:id/like | POST   |
+
+-  As rotas podem ser executadas através do Insomnia, importando o arquivo `Insomnia_requests.json`.
 
 Made with 🚀 by Luis.
