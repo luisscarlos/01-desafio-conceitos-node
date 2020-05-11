@@ -6,7 +6,7 @@ Desenvolver uma aplicação para armazenar repositórios de um portfólio, que i
 
 ### Passos para executar o desafio desenvolvido:
 -  Clonar o projeto
-> Executar o comando `git clone git clone https://github.com/luisscarlos/bootcamp-desafio-conceitos-node.git` no teminal na pasta que deseja clonar
+> Executar o comando `git clone git clone https://github.com/luisscarlos/01-desafio-conceitos-node.git` no teminal na pasta que deseja clonar
 
 - Iniciar dependências
  > Na raiz do projeto executar o comando`yarn` no terminal
